@@ -4,5 +4,7 @@ namespace motorWorks {
     */
    //% blockId=Car Spawner
    //% block="Spawn Car"
-    let Car = game.createSprite(2, 4)
+    export function spawnCar():  void {
+        let Car = game.createSprite(2, 4)
+    }
 }
