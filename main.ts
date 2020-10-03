@@ -12,7 +12,8 @@ namespace motorWorks {
     * Turns on gass
     */
    //% blockId=Car Gass
-   //% block="Turn on Gass"
+   //% block="Gass on"
+    export function gassOn():  void {
     let Gass = 100
     control.inBackground(function () {
         while (Gass != 0) {
@@ -23,4 +24,5 @@ namespace motorWorks {
             game.removeLife(1)
         }
 })
+    }  
 }
