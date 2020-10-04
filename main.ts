@@ -13,10 +13,7 @@ namespace motorWorks {
 input.onButtonPressed(Button.B, function () {
     Car.change(LedSpriteProperty.X, 1)
 })
-
-    
-    }
-    
+}
     /**
     * Turns on gass
     */
