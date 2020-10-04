@@ -20,7 +20,6 @@ namespace motorWorks {
         control.inBackground(function () {
         while (Gass != 0) {
             Gass += -1
-            basic.pause(100)
         }
         if (Gass == 0) {
             game.gameOver()
