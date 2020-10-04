@@ -1,6 +1,6 @@
 namespace motorWorks {
     /**
-    * Spawns Car;
+    * Spawns Car
     */
    //% blockId=Car Spawner
    //% block="Spawn Car"
