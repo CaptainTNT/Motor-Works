@@ -16,15 +16,15 @@ namespace motorWorks {
    //% block="Gass on"
     export function gassOn():  void {
     let Gass = 2
-    while(game.isGameOver() == false) {
+    basic.forever(function () {
+    while (game.isGameOver() == false) {
         while (Gass != 0) {
             Gass += -1
         }
-        control.inBackground(function () {
-        if (Gass == 100) {
-            game.gameOver()
-        }
-})
     }
+    if (Gass == 0 || Gass > 0) {
+        game.gameOver()
+    }
+})
   }
 }
