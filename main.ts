@@ -24,22 +24,16 @@ input.onButtonPressed(Button.B, function () {
    //% block="Gass on"
     export function gassOn(index: boolean):  void {
     let Gass = 100
-basic.forever(function () {
+    basic.forever(function () {
     if (game.isGameOver() == false) {
         if (Gass != 0) {
             Gass += -1
             basic.pause(100)
         }
-    }
-    if (Gass == 0 || Gass < 0) {
-        game.gameOver()
+        if (Gass == 0 || Gass < 0) {
+            game.gameOver()
+        }
     }
 })
   }
-    /** 
-     *  Makes map
-    */
-   //% blockId=Makes map
-   //%Block="Set map to "
-
 }
