@@ -30,7 +30,7 @@ input.onButtonPressed(Button.B, function () {
             Gass += -1
             basic.pause(100)
         }
-        if (Gass == 0 || Gass < 0) {
+        if (Gass == 0) {
             game.gameOver()
         }
     }
