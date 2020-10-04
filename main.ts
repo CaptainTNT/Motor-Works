@@ -17,6 +17,9 @@ namespace motorWorks {
     export function gassOn():  void {
     let Gass = 100
     while(game.isGameOver() == false) {
+        while (Gass != 0) {
+            Gass += -5
+        }
         control.inBackground(function () {
         if (Gass == 100) {
             game.gameOver()
