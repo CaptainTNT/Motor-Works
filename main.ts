@@ -16,8 +16,8 @@ namespace motorWorks {
    //% block="Gass on"
     export function gassOn():  void {
     let Gass = 100
-    game.setLife(3)
-    control.inBackground(function () {
+    while(game.isGameOver() == false) {
+        control.inBackground(function () {
         while (Gass != 0) {
             Gass += -1
             basic.pause(100)
@@ -27,4 +27,5 @@ namespace motorWorks {
         }
 })
     }
+  }
 }
