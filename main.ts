@@ -22,7 +22,7 @@ input.onButtonPressed(Button.B, function () {
     */
    //% blockId=Car Gass
    //% block="Gass on"
-    export function gassOn(index: boolean):  void {
+    export function gassOn():  void {
     let Gass = 100
     basic.forever(function () {
     if (game.isGameOver() == false) {
