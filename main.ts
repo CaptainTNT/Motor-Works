@@ -8,6 +8,7 @@ namespace motorWorks {
         game.addLife(3)
         let Car = game.createSprite(2, 4)
     }
+    
     /**
     * Turns on gass
     */
