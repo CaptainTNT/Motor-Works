@@ -18,10 +18,7 @@ namespace motorWorks {
     let Gass = 100
     while(game.isGameOver() == false) {
         control.inBackground(function () {
-        while (Gass != 0) {
-            Gass += -1
-        }
-        if (Gass == 0) {
+        if (Gass == 100) {
             game.gameOver()
         }
 })
