@@ -23,7 +23,7 @@ namespace motorWorks {
             basic.pause(100)
         }
         if (Gass == 0) {
-            game.removeLife(1)
+            game.gameOver()
         }
 })
     }
