@@ -22,7 +22,7 @@ input.onButtonPressed(Button.B, function () {
     */
    //% blockId=Car Gass
    //% block="Gass on"
-    export function gassOn():  void {
+    export function gassOn(index: boolean):  void {
     let Gass = 100
 basic.forever(function () {
     if (game.isGameOver() == false) {
@@ -36,4 +36,10 @@ basic.forever(function () {
     }
 })
   }
+    /** 
+     *  Makes map
+    */
+   //% blockId=Makes map
+   //%Block="Set map to "
+
 }
