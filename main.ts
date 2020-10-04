@@ -15,7 +15,7 @@ namespace motorWorks {
    //% blockId=Car Gass
    //% block="Gass on"
     export function gassOn():  void {
-    let Gass = 1
+    let Gass = 2
     while(game.isGameOver() == false) {
         while (Gass != 0) {
             Gass += -1
