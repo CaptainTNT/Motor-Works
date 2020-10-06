@@ -1,4 +1,13 @@
 namespace motorWorks {
+    
+    function carController(Speed: number,Crashed: number, Done: number) {
+    if (Crashed = 1) {
+        Done += Speed
+    }
+
+
+    }
+
     /**
     * Spawns Car with controls 
     */
@@ -33,4 +42,31 @@ input.onButtonPressed(Button.B, function () {
     }
 })
   }
+    /**
+    * Spawns map
+    */
+   //% blockId= spawn map
+   //% block="spawns map"
+    export function choseMAP(index: number, index2: number):  void { 
+    let Done = 0
+
+    basic.showNumber(Done)
+
+    basic.forever(function () {
+    if (index = 1) {
+        
+    }    
+    
+    if (index = 2) {
+        
+    }
+    
+    if (index = 3) {
+        
+    }
+
+
+
+    })    
+  } 
 }
