@@ -4,7 +4,7 @@ namespace motorWorks {
     if (Crashed = 1) {
         Done += Speed
     }
-
+    basic.showNumber(Done)
 
     }
     /**
@@ -45,12 +45,11 @@ input.onButtonPressed(Button.B, function () {
     * Spawns map
     */
    //% blockId= spawn map
-   //% block="spawns map index index2"
+   //% block="spawns map $index $index2"
    //% index.min=1 index.max=3
     export function choseMAP(index: number, index2: number):  void { 
-    let Done = 0
 
-    basic.showNumber(Done)
+    carController(1, 1, 1)
 
     basic.forever(function () {
     if (index = 1) {
