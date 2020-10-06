@@ -64,9 +64,6 @@ input.onButtonPressed(Button.B, function () {
     if (index = 3) {
         
     }
-
-
-
     })    
   } 
 }
