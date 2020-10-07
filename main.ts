@@ -18,7 +18,6 @@ namespace motorWorks {
 
     }
 
-    game.gameOver()
     basic.forever(function () {
         if (Crashed = false) {
             if (Done != 100) {
