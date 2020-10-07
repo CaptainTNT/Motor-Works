@@ -107,4 +107,15 @@ namespace motorWorks {
         mapsLaps(index, index2)// 3. goCart
     }
   } 
+    /**
+    * Spawns block for the car to dodge
+    */
+   //% blockId= dodge block XD
+   //% block="spawns blocks to dodge"
+    export function dodgeBlocks() {
+        basic.forever(function () { 
+            randint(200, 300)
+            basic.pause()
+        })
+    }
 } 
