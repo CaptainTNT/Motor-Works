@@ -50,8 +50,10 @@ namespace motorWorks {
             let Speed = 2
             }
           }
-        carX(Car.get(LedSpriteProperty.X))
-        })    
+        }) 
+        forever(function () {
+            carX(Car.get(LedSpriteProperty.X))
+        })   
     input.onButtonPressed(Button.A, function () {
     Car.change(LedSpriteProperty.X, -1)  
     })
@@ -119,7 +121,7 @@ namespace motorWorks {
 
     forever(function () {
         if (BlockX = CarX) {
-            let Crashed = true
+            basic.showIcon(IconNames.Yes)
         } else {
             let Crashed = false
         }
@@ -131,26 +133,25 @@ namespace motorWorks {
    //% blockId= dodge block XD
    //% block="spawns blocks"
     export function dodgeBlocks() {
+        let Deleteblock = false
         let Block = game.createSprite(randint(1, 3), 0)
-            basic.pause(Speed * 100)
-            for(let i = 0; i < 4; i++) {
-                Block.change(LedSpriteProperty.Y, 1)
-            }
             Block.delete()
         basic.forever(function () { 
             let Block = game.createSprite(randint(1, 3), 0)
-            basic.pause(100)
-            for(let i = 0; i < 4; i++) {
+            basic.pause(200)
+            if (Crashed = true) {
+                for(let i = 0; i < 4; i++) {
                 Block.change(LedSpriteProperty.Y, 1)
-                basic.pause(Speed * 100)
+                basic.pause(200)
+                }
             }
-            Block.delete()
-            basic.pause(randint(200, 200))
+            if (Deleteblock = true) {
+                Block.delete()
+                basic.pause(randint(200, 200))
+            }
         })
         basic.forever(function () {
-             if (Block.get(LedSpriteProperty.X) == 2) {   
-                blockX(Block.get(LedSpriteProperty.X))
-          }
+                blockX(Block.get(LedSpriteProperty.X) - 1)
         })
     }
 } 
