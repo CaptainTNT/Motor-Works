@@ -48,8 +48,7 @@ namespace motorWorks {
             let Speed = 2
             }
           }
-        })
-        
+        })    
     input.onButtonPressed(Button.A, function () {
     Car.change(LedSpriteProperty.X, -1)  
     })
@@ -60,7 +59,7 @@ namespace motorWorks {
     /**
     * Turns on gass
     */
-   //% blockId=Car Gass
+   //% blockId=CarGass
    //% block="Gass on"
     export function gassOn():  void {
     let Gass = 100
@@ -107,16 +106,34 @@ namespace motorWorks {
         mapsLaps(index, index2)// 3. goCart
     }
   } 
+   
+   
     /**
     * Spawns Block for the car to dodge
     */
    //% blockId= dodge block XD
    //% block="spawns blocks"
     export function dodgeBlocks() {
+        let Block = game.createSprite(randint(1, 3), 0)
+            basic.pause(100)
+            for(let i = 0; i < 4; i++) {
+                Block.change(LedSpriteProperty.Y, 1)
+            }
+            Block.delete()
         basic.forever(function () { 
-            let Block = game.createSprite((1, 3), 0)
-            basic.pause(randint(200, 300))
-        
+            let Block = game.createSprite(randint(1, 3), 0)
+            basic.pause(100)
+            for(let i = 0; i < 4; i++) {
+                Block.change(LedSpriteProperty.Y, 1)
+                basic.pause(Speed * 100)
+            }
+            Block.delete()
+            basic.pause(randint(200, 200))
+        })
+        basic.forever(function () {
+             if (Block.get(LedSpriteProperty.X) == 2) {
+                 
+          }
         })
     }
 } 
