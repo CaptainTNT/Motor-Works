@@ -108,14 +108,13 @@ namespace motorWorks {
     }
   } 
     /**
-    * Spawns block for the car to dodge
+    * Spawns Block for the car to dodge
     */
    //% blockId= dodge block XD
-   //% block="spawns blocks to dodge"
+   //% block="spawns blocks"
     export function dodgeBlocks() {
         basic.forever(function () { 
-            randint(200, 300)
-            basic.pause()
+            basic.pause(randint(200, 300))
         })
     }
 } 
