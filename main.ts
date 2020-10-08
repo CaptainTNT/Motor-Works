@@ -114,7 +114,7 @@ namespace motorWorks {
    //% block="spawns blocks"
     export function dodgeBlocks() {
         basic.forever(function () { 
-            let Block = game.createSprite((2, 3), 0)
+            let Block = game.createSprite((1, 3), 0)
             basic.pause(randint(200, 300))
         
         })
