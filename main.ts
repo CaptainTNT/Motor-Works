@@ -3,6 +3,8 @@ namespace motorWorks {
     let Crashed = false
     let Lapsdone = 0
     let Speed = Math.max(0, 3)
+    let CarX = 0
+    let BlockX = 0
 
     function mapsLaps(Map: number,Laps: number,) {
     Lapsdone = Math.max(0, Laps)
@@ -48,6 +50,7 @@ namespace motorWorks {
             let Speed = 2
             }
           }
+        carX(Car.get(LedSpriteProperty.X))
         })    
     input.onButtonPressed(Button.A, function () {
     Car.change(LedSpriteProperty.X, -1)  
@@ -106,7 +109,21 @@ namespace motorWorks {
         mapsLaps(index, index2)// 3. goCart
     }
   } 
-   
+    function carX(X: number) {
+        let CarX = X
+    }
+    
+    function blockX(X: number) {
+        let BlockX = X
+    }
+
+    forever(function () {
+        if (BlockX = CarX) {
+            let Crashed = true
+        } else {
+            let Crashed = false
+        }
+    })
    
     /**
     * Spawns Block for the car to dodge
@@ -115,7 +132,7 @@ namespace motorWorks {
    //% block="spawns blocks"
     export function dodgeBlocks() {
         let Block = game.createSprite(randint(1, 3), 0)
-            basic.pause(100)
+            basic.pause(Speed * 100)
             for(let i = 0; i < 4; i++) {
                 Block.change(LedSpriteProperty.Y, 1)
             }
@@ -131,8 +148,8 @@ namespace motorWorks {
             basic.pause(randint(200, 200))
         })
         basic.forever(function () {
-             if (Block.get(LedSpriteProperty.X) == 2) {
-                 
+             if (Block.get(LedSpriteProperty.X) == 2) {   
+                blockX(Block.get(LedSpriteProperty.X))
           }
         })
     }
