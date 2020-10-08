@@ -6,6 +6,7 @@ namespace motorWorks {
 
     function mapsLaps(Map: number,Laps: number,) {
     Lapsdone = Math.max(0, Laps)
+    //Finish this 
     if (Map = 1) {
 
     }
@@ -50,8 +51,7 @@ namespace motorWorks {
         })
         
     input.onButtonPressed(Button.A, function () {
-    Car.change(LedSpriteProperty.X, -1)
-    
+    Car.change(LedSpriteProperty.X, -1)  
     })
     input.onButtonPressed(Button.B, function () {
     Car.change(LedSpriteProperty.X, 1)
@@ -96,7 +96,7 @@ namespace motorWorks {
     let sprite13 = game.createSprite(4, 4)
 
     if (index = 1) {
-        mapsLaps(index, index2) //1. straightAway
+        mapsLaps(index, index2) //1. straightAway   
     }    
     
     if (index = 2) {
@@ -115,6 +115,7 @@ namespace motorWorks {
     export function dodgeBlocks() {
         basic.forever(function () { 
             basic.pause(randint(200, 300))
+        
         })
     }
 } 
