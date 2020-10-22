@@ -5,6 +5,7 @@ namespace motorWorks {
     let Speed = Math.max(0, 3)
     let CarX = 0
     let BlockX = 0
+    let BlockY = 0
 
     function mapsLaps(Map: number,Laps: number,) {
     Lapsdone = Math.max(0, Laps)
@@ -51,8 +52,8 @@ namespace motorWorks {
             }
           }
         }) 
-        forever(function () {
-            carX(Car.get(LedSpriteProperty.X))
+        forever(function () { 
+            car(Car.get(LedSpriteProperty.X))
         })   
     input.onButtonPressed(Button.A, function () {
     Car.change(LedSpriteProperty.X, -1)  
@@ -110,20 +111,27 @@ namespace motorWorks {
     if (index = 3) {
         mapsLaps(index, index2)// 3. goCart
     }
-  } 
-    function carX(X: number) {
-        let CarX = X
+  }
+    
+    function car(x: number) {
+        CarX = x
     }
     
-    function blockX(X: number) {
-        let BlockX = X
+    function block(x:number, y: number) {
+        BlockX = x
+        BlockY = y
     }
-
+    
     forever(function () {
         if (BlockX = CarX) {
-            basic.showIcon(IconNames.Yes)
+            Crashed = true
         } else {
             let Crashed = false
+        }
+        if (Crashed = true) {
+            basic.pause(100)
+            
+            game.gameOver()
         }
     })
    
@@ -151,7 +159,7 @@ namespace motorWorks {
             }
         })
         basic.forever(function () {
-                blockX(Block.get(LedSpriteProperty.X) - 1)
+                block((Block.get(LedSpriteProperty.X)),(Block.get(LedSpriteProperty.Y))) 
         })
     }
 } 
